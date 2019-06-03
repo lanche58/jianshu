@@ -1,26 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import {ResetGlobalStyle} from './statics/css/reset';
+import {CommonGlobalStyle} from './statics/css/common';
+import './statics/css/iconfont.css';
+import Header from './common/header';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ResetGlobalStyle/>
+      <CommonGlobalStyle/>
+      <Header/>
     </div>
-  );
+  )
 }
 
 export default App;
