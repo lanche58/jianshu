@@ -117,3 +117,63 @@ export const NavItem = styled.a`
         color: #ea6f5a;
     }
 `;
+
+export const HeaderSearch = styled.div`
+    float: left;
+    position: relative;
+    margin-top: 9px;
+`;
+
+export const SearchBtn = styled.a.attrs({
+    href: "javascript:;"
+})`
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    margin-top: -15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    color: #999;
+    &.focused{
+        background: #999;
+        color: #fff;
+    }
+`;
+
+export const SearchInput = styled.input.attrs({
+    placeholder: "搜索"
+})`
+    display: block;
+    width: 150px;
+    height: 38px;
+    padding: 6px 40px 6px 20px;
+    border-radius: 20px;
+    background: #eee;
+    border: 1px solid #eee;
+    line-height: 24px;
+    &::placeholder{
+        color: #999;
+    }
+    &:focus{
+        outline: none;
+    }
+    &.slide-exit-done,
+    &.slide-enter{
+        width: 150px;
+    }
+    &.slide-enter-active{
+        width: 240px;
+        transition: 300ms;
+    }
+    &.slide-exit,
+    &.slide-enter-done{
+        width: 240px;
+    }
+    &.slide-exit-active{
+        width: 150px;
+        transition: 300ms;
+    }
+`;
