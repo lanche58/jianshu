@@ -18,7 +18,7 @@ import betaPic from '../../statics/images/beta.png';
 // 引入动画
 import { CSSTransition } from 'react-transition-group';
 import { connect } from 'react-redux';
-import { focusHandleAction, blurHandleAction } from '../../store/actionCreators';
+import { actionCreators } from './store';
 
 function Header(props) {
     const {focused, focusHandle, blurHandle} = props;
@@ -56,17 +56,17 @@ function Header(props) {
 
 const mapStateToProps = (state) => {
     return {
-        focused: state.searchFocused
+        focused: state.header.searchFocused
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
         focusHandle() {
-            dispatch(focusHandleAction())
+            dispatch(actionCreators.focusHandleAction())
         },
         blurHandle() {
-            dispatch(blurHandleAction())
+            dispatch(actionCreators.blurHandleAction())
         }
     }
 }
