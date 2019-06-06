@@ -121,7 +121,7 @@ export const NavItem = styled.a`
 export const HeaderSearch = styled.div`
     float: left;
     position: relative;
-    margin-top: 9px;
+    margin: 9px 0 0 25px;
 `;
 
 export const SearchBtn = styled.a.attrs({
