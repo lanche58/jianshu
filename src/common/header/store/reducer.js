@@ -1,18 +1,17 @@
 import * as actionTypes from './actionTypes';
+import { fromJS } from 'immutable';
 
-const defaultState = {
+// 生成 immutable对象（不可变对象）
+const defaultState = fromJS({
     searchFocused: false
-}
+});
 
 export default (state = defaultState, action) => {
-    const newState = JSON.parse(JSON.stringify(state));
     switch(action.type) {
         case actionTypes.INPUT_FOCUS:
-            newState.searchFocused = true;
-            return newState;
+            return state.set('searchFocused', true);
         case actionTypes.INPUT_BLUR:
-            newState.searchFocused = false;
-            return newState;
+            return state.set('searchFocused', false);
         default:
             return state;
     }
