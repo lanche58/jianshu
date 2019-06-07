@@ -177,3 +177,78 @@ export const SearchInput = styled.input.attrs({
         transition: 300ms;
     }
 `;
+
+export const SearchTips = styled.div`
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 250px;
+    padding: 20px 20px 10px;
+    margin-top: 9px;
+    border-radius: 4px;
+    background: white;
+    box-shadow: 0 0 8px rgba(0,0,0,.2);
+    &:before, &:after{
+        content: "";
+        position: absolute;
+    }
+    &:before{
+        left: 25px;
+        top: -5px;
+        z-index: -1;
+        width: 10px;
+        height: 10px;
+        background: white;
+        transform: rotate(45deg);
+        box-shadow: 0 0 8px rgba(0,0,0,.2);
+    }
+    &:after{
+        bottom: 100%;
+        left: 20px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 9px solid white;
+    }
+    .t{
+        margin-bottom: 14px;
+        line-height: 20px;
+        color: #999;
+    }
+`;
+
+export const NextTipsBtn = styled.a`
+    float: right;
+    font-size: 13px;
+    color: #999;
+    .icon{
+        display: inline-block;
+        vertical-align: bottom;
+        font-size: 12px;
+        transition: .5s;
+    }
+    &:hover{
+        color: #2f2f2f;
+    }
+`;
+
+export const SearchTipsList = styled.ul`
+    li{
+        float: left;
+        margin: 0 10px 12px 0;
+    }
+    a{
+        display: block;
+        padding: 0 6px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        font-size: 12px;
+        line-height: 18px;
+        color: #787878;
+        &:hover{
+            color: #333;
+            border-color: #b4b4b4;
+        }
+    }
+`;

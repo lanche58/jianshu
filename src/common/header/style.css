@@ -4,4 +4,8 @@
     position: absolute;
     text-decoration: none;
     border-radius: 40px;
+    transform: rotate();
+    background-color: transparent;
+    /* vertical-align:  */
+    vertical-align: middle;
 }
