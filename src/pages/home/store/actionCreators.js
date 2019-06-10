@@ -6,7 +6,7 @@ export const getAsyncHotsListAction = () => ({
     type: actionTypes.GET_ASYNC_HOTS_LIST_DATA
 });
 
-export const changeHotsList = (data) => ({
+export const changeHotsListAction = (data) => ({
     type: actionTypes.CHANGE_HOTS_LIST,
     data: fromJS(data)
 });

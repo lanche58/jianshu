@@ -5,15 +5,14 @@ import axios from 'axios';
 
 function* getHotsList() {
     try {
-        const res = yield axios.get('/homeHotsList.json');
+        const res = yield axios.get('/api/homeHotsList.json?page=1');
         // 设置store中hotsList的值
-        console.log('saga');
-        // yield put(actionCreators.changeHotsList(res.data));
+        yield put(actionCreators.changeHotsListAction(res.data.data));
     } catch(err) {
         console.log('请求失败');
     }
 }
 
 export default function* getHotsListSaga() {
-    yield takeEvery(actionTypes.GET_ASYNC_HOTS_LIST_DATA, getHotsList())
+    yield takeEvery(actionTypes.GET_ASYNC_HOTS_LIST_DATA, getHotsList)
 }

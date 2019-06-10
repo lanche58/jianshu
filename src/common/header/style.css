@@ -9,4 +9,6 @@
     /* vertical-align:  */
     vertical-align: middle;
     overflow: hidden;
+    align-items: center; 
+    text-decoration: underline;
 }
